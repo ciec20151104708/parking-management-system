@@ -1,0 +1,4 @@
+D:\vs2010 project\parking management system\parking management system\obj\x86\Release\parking_management_system.Form1.resources
+D:\vs2010 project\parking management system\parking management system\obj\x86\Release\parking_management_system.Form2.resources
+D:\vs2010 project\parking management system\parking management system\obj\x86\Release\parking_management_system.Properties.Resources.resources
+D:\vs2010 project\parking management system\parking management system\obj\x86\Release\parking management system.csproj.GenerateResource.Cache

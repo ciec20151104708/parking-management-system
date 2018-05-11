@@ -1,0 +1,11 @@
+D:\vs2010 project\parking management system\parking management system\bin\Debug\parking management system.exe
+D:\vs2010 project\parking management system\parking management system\bin\Debug\parking management system.pdb
+D:\vs2010 project\parking management system\parking management system\obj\x86\Debug\parking_management_system.Properties.Resources.resources
+D:\vs2010 project\parking management system\parking management system\obj\x86\Debug\parking management system.csproj.GenerateResource.Cache
+D:\vs2010 project\parking management system\parking management system\obj\x86\Debug\parking management system.exe
+D:\vs2010 project\parking management system\parking management system\obj\x86\Debug\parking management system.pdb
+D:\vs2010 project\parking management system\parking management system\obj\x86\Debug\parking management system.csprojResolveAssemblyReference.cache
+D:\vs2010 project\parking management system\parking management system\bin\Debug\MySql.Data.dll
+D:\vs2010 project\parking management system\parking management system\obj\x86\Debug\parking_management_system.FrmLogin.resources
+D:\vs2010 project\parking management system\parking management system\obj\x86\Debug\parking_management_system.FrmMain.resources
+D:\vs2010 project\parking management system\parking management system\obj\x86\Debug\parking_management_system.FrmRegister.resources
