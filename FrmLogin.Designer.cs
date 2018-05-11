@@ -66,6 +66,7 @@
             // 
             this.txtuserpass.Location = new System.Drawing.Point(201, 97);
             this.txtuserpass.Name = "txtuserpass";
+            this.txtuserpass.PasswordChar = '*';
             this.txtuserpass.Size = new System.Drawing.Size(173, 25);
             this.txtuserpass.TabIndex = 3;
             // 
@@ -101,6 +102,7 @@
             // 
             // FrmLogin
             // 
+            this.AcceptButton = this.btnlogin;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(540, 253);
