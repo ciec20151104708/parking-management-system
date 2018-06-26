@@ -12,7 +12,9 @@ namespace parking_management_system
     public partial class FrmInfo : Form
     {
         DataGridView dgvInfo;
-        string arrival = DateTime.Now.ToString();
+        DateTime arrival = DateTime.Now;
+        DateTime leave = DateTime.Now;
+
         public FrmInfo()
         {
             InitializeComponent();
@@ -23,6 +25,12 @@ namespace parking_management_system
             InitializeComponent();
             dgvInfo = _dgvinfo;
         }
+        public FrmInfo( DateTime _arrival,String _num , String _count)
+        {
+            InitializeComponent();
+            arrival = _arrival;
+
+        }
         private void btnAddinfo_Click(object sender, EventArgs e)
         {
 
@@ -30,20 +38,24 @@ namespace parking_management_system
             
             String count = txtCount.Text;
            // DateTime leave = DateTime.Now;
-           
+            TimeSpan time = leave - arrival;
+            double getHours = time.TotalHours;
+            double money = getHours * 2;
             DataRow dr = FrmMain.dt.NewRow();
           
             dr["colnum"] = num;
             dr["colarrival"] = arrival;
             dr["colcount"] = count;
-
+            dr["colleave"]=leave;
+            dr["coltime"] = time;
+            dr["colmoney"] = money;
             FrmMain.dt.Rows.Add(dr);
             dgvInfo.DataSource = FrmMain.dt;
         }
 
         private void btnGettime_Click(object sender, EventArgs e)
         {
-            txtArrival.Text = arrival;
+            txtArrival.Text = Convert.ToString(arrival);
         }
 
     }

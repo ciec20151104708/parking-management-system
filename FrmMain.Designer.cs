@@ -50,6 +50,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.btnalteruserpass = new System.Windows.Forms.Button();
             this.btnExitSystem = new System.Windows.Forms.Button();
+            this.btn_refresh = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInfo)).BeginInit();
@@ -136,19 +137,20 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.btn_refresh);
             this.groupBox2.Controls.Add(this.btnCharge);
             this.groupBox2.Controls.Add(this.btnAddCar);
             this.groupBox2.Controls.Add(this.dgvInfo);
-            this.groupBox2.Location = new System.Drawing.Point(15, 166);
+            this.groupBox2.Location = new System.Drawing.Point(184, 166);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(838, 385);
+            this.groupBox2.Size = new System.Drawing.Size(669, 385);
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "停车信息";
             // 
             // btnCharge
             // 
-            this.btnCharge.Location = new System.Drawing.Point(583, 345);
+            this.btnCharge.Location = new System.Drawing.Point(484, 345);
             this.btnCharge.Name = "btnCharge";
             this.btnCharge.Size = new System.Drawing.Size(113, 23);
             this.btnCharge.TabIndex = 2;
@@ -157,7 +159,7 @@
             // 
             // btnAddCar
             // 
-            this.btnAddCar.Location = new System.Drawing.Point(99, 345);
+            this.btnAddCar.Location = new System.Drawing.Point(82, 345);
             this.btnAddCar.Name = "btnAddCar";
             this.btnAddCar.Size = new System.Drawing.Size(75, 23);
             this.btnAddCar.TabIndex = 1;
@@ -175,16 +177,16 @@
             this.ColLeave,
             this.ColTime,
             this.ColMoney});
-            this.dgvInfo.Location = new System.Drawing.Point(6, 24);
+            this.dgvInfo.Location = new System.Drawing.Point(6, 34);
             this.dgvInfo.Name = "dgvInfo";
             this.dgvInfo.RowTemplate.Height = 27;
-            this.dgvInfo.Size = new System.Drawing.Size(826, 305);
+            this.dgvInfo.Size = new System.Drawing.Size(645, 305);
             this.dgvInfo.TabIndex = 0;
             // 
             // ColCount
             // 
             this.ColCount.DataPropertyName = "colcount";
-            this.ColCount.HeaderText = "位置";
+            this.ColCount.HeaderText = "编号";
             this.ColCount.Name = "ColCount";
             // 
             // ColNum
@@ -253,6 +255,16 @@
             this.btnExitSystem.Text = "退出系统";
             this.btnExitSystem.UseVisualStyleBackColor = true;
             // 
+            // btn_refresh
+            // 
+            this.btn_refresh.Location = new System.Drawing.Point(290, 345);
+            this.btn_refresh.Name = "btn_refresh";
+            this.btn_refresh.Size = new System.Drawing.Size(75, 23);
+            this.btn_refresh.TabIndex = 3;
+            this.btn_refresh.Text = "刷新";
+            this.btn_refresh.UseVisualStyleBackColor = true;
+            this.btn_refresh.Click += new System.EventHandler(this.btn_refresh_Click);
+            // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
@@ -299,5 +311,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ColLeave;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColTime;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColMoney;
+        private System.Windows.Forms.Button btn_refresh;
     }
 }
