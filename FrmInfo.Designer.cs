@@ -37,6 +37,8 @@
             this.btnAddinfo = new System.Windows.Forms.Button();
             this.btnExitInfo = new System.Windows.Forms.Button();
             this.btnGettime = new System.Windows.Forms.Button();
+            this.txtCarType = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -51,7 +53,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(113, 112);
+            this.label2.Location = new System.Drawing.Point(113, 158);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(67, 15);
             this.label2.TabIndex = 1;
@@ -60,7 +62,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(143, 185);
+            this.label3.Location = new System.Drawing.Point(143, 233);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(37, 15);
             this.label3.TabIndex = 2;
@@ -75,21 +77,21 @@
             // 
             // txtArrival
             // 
-            this.txtArrival.Location = new System.Drawing.Point(237, 109);
+            this.txtArrival.Location = new System.Drawing.Point(237, 155);
             this.txtArrival.Name = "txtArrival";
             this.txtArrival.Size = new System.Drawing.Size(233, 25);
             this.txtArrival.TabIndex = 4;
             // 
             // txtCount
             // 
-            this.txtCount.Location = new System.Drawing.Point(237, 185);
+            this.txtCount.Location = new System.Drawing.Point(237, 233);
             this.txtCount.Name = "txtCount";
             this.txtCount.Size = new System.Drawing.Size(233, 25);
             this.txtCount.TabIndex = 5;
             // 
             // btnAddinfo
             // 
-            this.btnAddinfo.Location = new System.Drawing.Point(49, 283);
+            this.btnAddinfo.Location = new System.Drawing.Point(49, 422);
             this.btnAddinfo.Name = "btnAddinfo";
             this.btnAddinfo.Size = new System.Drawing.Size(112, 23);
             this.btnAddinfo.TabIndex = 6;
@@ -99,7 +101,7 @@
             // 
             // btnExitInfo
             // 
-            this.btnExitInfo.Location = new System.Drawing.Point(395, 283);
+            this.btnExitInfo.Location = new System.Drawing.Point(395, 422);
             this.btnExitInfo.Name = "btnExitInfo";
             this.btnExitInfo.Size = new System.Drawing.Size(104, 23);
             this.btnExitInfo.TabIndex = 7;
@@ -108,7 +110,7 @@
             // 
             // btnGettime
             // 
-            this.btnGettime.Location = new System.Drawing.Point(226, 283);
+            this.btnGettime.Location = new System.Drawing.Point(226, 422);
             this.btnGettime.Name = "btnGettime";
             this.btnGettime.Size = new System.Drawing.Size(113, 23);
             this.btnGettime.TabIndex = 8;
@@ -116,11 +118,29 @@
             this.btnGettime.UseVisualStyleBackColor = true;
             this.btnGettime.Click += new System.EventHandler(this.btnGettime_Click);
             // 
+            // txtCarType
+            // 
+            this.txtCarType.Location = new System.Drawing.Point(237, 92);
+            this.txtCarType.Name = "txtCarType";
+            this.txtCarType.Size = new System.Drawing.Size(233, 25);
+            this.txtCarType.TabIndex = 10;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(128, 95);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(67, 15);
+            this.label4.TabIndex = 9;
+            this.label4.Text = "车辆类型";
+            // 
             // FrmInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(570, 344);
+            this.ClientSize = new System.Drawing.Size(570, 507);
+            this.Controls.Add(this.txtCarType);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.btnGettime);
             this.Controls.Add(this.btnExitInfo);
             this.Controls.Add(this.btnAddinfo);
@@ -148,5 +168,7 @@
         private System.Windows.Forms.Button btnAddinfo;
         private System.Windows.Forms.Button btnExitInfo;
         private System.Windows.Forms.Button btnGettime;
+        private System.Windows.Forms.TextBox txtCarType;
+        private System.Windows.Forms.Label label4;
     }
 }

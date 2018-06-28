@@ -40,17 +40,15 @@
             this.btnCharge = new System.Windows.Forms.Button();
             this.btnAddCar = new System.Windows.Forms.Button();
             this.dgvInfo = new System.Windows.Forms.DataGridView();
-            this.ColCount = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColArrival = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColLeave = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColMoney = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lbusername = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.btnalteruserpass = new System.Windows.Forms.Button();
             this.btnExitSystem = new System.Windows.Forms.Button();
-            this.btn_refresh = new System.Windows.Forms.Button();
+            this.ColCount = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColType = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColArrival = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Colplace = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInfo)).BeginInit();
@@ -137,7 +135,6 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.btn_refresh);
             this.groupBox2.Controls.Add(this.btnCharge);
             this.groupBox2.Controls.Add(this.btnAddCar);
             this.groupBox2.Controls.Add(this.dgvInfo);
@@ -173,51 +170,14 @@
             this.dgvInfo.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ColCount,
             this.ColNum,
+            this.ColType,
             this.ColArrival,
-            this.ColLeave,
-            this.ColTime,
-            this.ColMoney});
+            this.Colplace});
             this.dgvInfo.Location = new System.Drawing.Point(6, 34);
             this.dgvInfo.Name = "dgvInfo";
             this.dgvInfo.RowTemplate.Height = 27;
-            this.dgvInfo.Size = new System.Drawing.Size(645, 305);
+            this.dgvInfo.Size = new System.Drawing.Size(657, 305);
             this.dgvInfo.TabIndex = 0;
-            // 
-            // ColCount
-            // 
-            this.ColCount.DataPropertyName = "colcount";
-            this.ColCount.HeaderText = "编号";
-            this.ColCount.Name = "ColCount";
-            // 
-            // ColNum
-            // 
-            this.ColNum.DataPropertyName = "colnum";
-            this.ColNum.HeaderText = "车牌号";
-            this.ColNum.Name = "ColNum";
-            // 
-            // ColArrival
-            // 
-            this.ColArrival.DataPropertyName = "colarrival";
-            this.ColArrival.HeaderText = "到达时间";
-            this.ColArrival.Name = "ColArrival";
-            // 
-            // ColLeave
-            // 
-            this.ColLeave.DataPropertyName = "colleave";
-            this.ColLeave.HeaderText = "离开时间";
-            this.ColLeave.Name = "ColLeave";
-            // 
-            // ColTime
-            // 
-            this.ColTime.DataPropertyName = "coltime";
-            this.ColTime.HeaderText = "停车时长";
-            this.ColTime.Name = "ColTime";
-            // 
-            // ColMoney
-            // 
-            this.ColMoney.DataPropertyName = "colmoney";
-            this.ColMoney.HeaderText = "停车费用";
-            this.ColMoney.Name = "ColMoney";
             // 
             // lbusername
             // 
@@ -255,15 +215,35 @@
             this.btnExitSystem.Text = "退出系统";
             this.btnExitSystem.UseVisualStyleBackColor = true;
             // 
-            // btn_refresh
+            // ColCount
             // 
-            this.btn_refresh.Location = new System.Drawing.Point(290, 345);
-            this.btn_refresh.Name = "btn_refresh";
-            this.btn_refresh.Size = new System.Drawing.Size(75, 23);
-            this.btn_refresh.TabIndex = 3;
-            this.btn_refresh.Text = "刷新";
-            this.btn_refresh.UseVisualStyleBackColor = true;
-            this.btn_refresh.Click += new System.EventHandler(this.btn_refresh_Click);
+            this.ColCount.DataPropertyName = "colcount";
+            this.ColCount.HeaderText = "编号";
+            this.ColCount.Name = "ColCount";
+            // 
+            // ColNum
+            // 
+            this.ColNum.DataPropertyName = "colnum";
+            this.ColNum.HeaderText = "车牌号";
+            this.ColNum.Name = "ColNum";
+            // 
+            // ColType
+            // 
+            this.ColType.DataPropertyName = "coltype";
+            this.ColType.HeaderText = "车辆类型";
+            this.ColType.Name = "ColType";
+            // 
+            // ColArrival
+            // 
+            this.ColArrival.DataPropertyName = "colarrival";
+            this.ColArrival.HeaderText = "到达时间";
+            this.ColArrival.Name = "ColArrival";
+            // 
+            // Colplace
+            // 
+            this.Colplace.DataPropertyName = "colplace";
+            this.Colplace.HeaderText = "位置";
+            this.Colplace.Name = "Colplace";
             // 
             // FrmMain
             // 
@@ -307,10 +287,8 @@
         private System.Windows.Forms.Button btnAddCar;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColCount;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColNum;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColType;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColArrival;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColLeave;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColTime;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColMoney;
-        private System.Windows.Forms.Button btn_refresh;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Colplace;
     }
 }
