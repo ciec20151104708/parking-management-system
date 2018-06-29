@@ -47,7 +47,6 @@ namespace parking_management_system
                 dr["coltype"] = type;
                 FrmMain.dt.Rows.Add(dr);
                 dgvInfo.DataSource = FrmMain.dt;
-
             }
             else
             {
@@ -57,7 +56,6 @@ namespace parking_management_system
            // TimeSpan time = leave - arrival;
            // double getHours = time.TotalHours;
            // double money = getHours * 2;
-           
         }
 
         private void btnGettime_Click(object sender, EventArgs e)

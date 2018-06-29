@@ -153,6 +153,7 @@
             this.btnCharge.TabIndex = 2;
             this.btnCharge.Text = "结算停车费";
             this.btnCharge.UseVisualStyleBackColor = true;
+            this.btnCharge.Click += new System.EventHandler(this.btnCharge_Click);
             // 
             // btnAddCar
             // 
@@ -241,7 +242,7 @@
             // 
             // Colplace
             // 
-            this.Colplace.DataPropertyName = "colplace";
+            this.Colplace.DataPropertyName = "colcount";
             this.Colplace.HeaderText = "位置";
             this.Colplace.Name = "Colplace";
             // 
