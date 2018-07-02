@@ -37,8 +37,8 @@
             this.btnAddinfo = new System.Windows.Forms.Button();
             this.btnExitInfo = new System.Windows.Forms.Button();
             this.btnGettime = new System.Windows.Forms.Button();
-            this.txtCarType = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.comboBoxtype = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // label1
@@ -107,6 +107,7 @@
             this.btnExitInfo.TabIndex = 7;
             this.btnExitInfo.Text = "退出";
             this.btnExitInfo.UseVisualStyleBackColor = true;
+            this.btnExitInfo.Click += new System.EventHandler(this.btnExitInfo_Click);
             // 
             // btnGettime
             // 
@@ -118,13 +119,6 @@
             this.btnGettime.UseVisualStyleBackColor = true;
             this.btnGettime.Click += new System.EventHandler(this.btnGettime_Click);
             // 
-            // txtCarType
-            // 
-            this.txtCarType.Location = new System.Drawing.Point(237, 92);
-            this.txtCarType.Name = "txtCarType";
-            this.txtCarType.Size = new System.Drawing.Size(233, 25);
-            this.txtCarType.TabIndex = 10;
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -134,12 +128,24 @@
             this.label4.TabIndex = 9;
             this.label4.Text = "车辆类型";
             // 
+            // comboBoxtype
+            // 
+            this.comboBoxtype.FormattingEnabled = true;
+            this.comboBoxtype.Items.AddRange(new object[] {
+            "小型车辆",
+            "中型车辆",
+            "大型车辆"});
+            this.comboBoxtype.Location = new System.Drawing.Point(237, 95);
+            this.comboBoxtype.Name = "comboBoxtype";
+            this.comboBoxtype.Size = new System.Drawing.Size(233, 23);
+            this.comboBoxtype.TabIndex = 11;
+            // 
             // FrmInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(570, 507);
-            this.Controls.Add(this.txtCarType);
+            this.Controls.Add(this.comboBoxtype);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.btnGettime);
             this.Controls.Add(this.btnExitInfo);
@@ -168,7 +174,7 @@
         private System.Windows.Forms.Button btnAddinfo;
         private System.Windows.Forms.Button btnExitInfo;
         private System.Windows.Forms.Button btnGettime;
-        private System.Windows.Forms.TextBox txtCarType;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.ComboBox comboBoxtype;
     }
 }

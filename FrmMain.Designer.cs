@@ -40,15 +40,15 @@
             this.btnCharge = new System.Windows.Forms.Button();
             this.btnAddCar = new System.Windows.Forms.Button();
             this.dgvInfo = new System.Windows.Forms.DataGridView();
-            this.lbusername = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.btnalteruserpass = new System.Windows.Forms.Button();
-            this.btnExitSystem = new System.Windows.Forms.Button();
             this.ColCount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColType = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColArrival = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Colplace = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lbusername = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.btnalteruserpass = new System.Windows.Forms.Button();
+            this.btnExitSystem = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInfo)).BeginInit();
@@ -180,6 +180,36 @@
             this.dgvInfo.Size = new System.Drawing.Size(657, 305);
             this.dgvInfo.TabIndex = 0;
             // 
+            // ColCount
+            // 
+            this.ColCount.DataPropertyName = "colcount";
+            this.ColCount.HeaderText = "编号";
+            this.ColCount.Name = "ColCount";
+            // 
+            // ColNum
+            // 
+            this.ColNum.DataPropertyName = "colnum";
+            this.ColNum.HeaderText = "车牌号";
+            this.ColNum.Name = "ColNum";
+            // 
+            // ColType
+            // 
+            this.ColType.DataPropertyName = "coltype";
+            this.ColType.HeaderText = "车辆类型";
+            this.ColType.Name = "ColType";
+            // 
+            // ColArrival
+            // 
+            this.ColArrival.DataPropertyName = "colarrival";
+            this.ColArrival.HeaderText = "到达时间";
+            this.ColArrival.Name = "ColArrival";
+            // 
+            // Colplace
+            // 
+            this.Colplace.DataPropertyName = "colcount";
+            this.Colplace.HeaderText = "位置";
+            this.Colplace.Name = "Colplace";
+            // 
             // lbusername
             // 
             this.lbusername.AutoSize = true;
@@ -215,36 +245,7 @@
             this.btnExitSystem.TabIndex = 7;
             this.btnExitSystem.Text = "退出系统";
             this.btnExitSystem.UseVisualStyleBackColor = true;
-            // 
-            // ColCount
-            // 
-            this.ColCount.DataPropertyName = "colcount";
-            this.ColCount.HeaderText = "编号";
-            this.ColCount.Name = "ColCount";
-            // 
-            // ColNum
-            // 
-            this.ColNum.DataPropertyName = "colnum";
-            this.ColNum.HeaderText = "车牌号";
-            this.ColNum.Name = "ColNum";
-            // 
-            // ColType
-            // 
-            this.ColType.DataPropertyName = "coltype";
-            this.ColType.HeaderText = "车辆类型";
-            this.ColType.Name = "ColType";
-            // 
-            // ColArrival
-            // 
-            this.ColArrival.DataPropertyName = "colarrival";
-            this.ColArrival.HeaderText = "到达时间";
-            this.ColArrival.Name = "ColArrival";
-            // 
-            // Colplace
-            // 
-            this.Colplace.DataPropertyName = "colcount";
-            this.Colplace.HeaderText = "位置";
-            this.Colplace.Name = "Colplace";
+            this.btnExitSystem.Click += new System.EventHandler(this.btnExitSystem_Click);
             // 
             // FrmMain
             // 

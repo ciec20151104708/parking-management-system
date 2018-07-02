@@ -31,15 +31,15 @@ namespace parking_management_system
         {
             String num = txtNum.Text;
             String count = txtCount.Text;
-            String type = txtCarType.Text;
-           
+            String type = comboBoxtype.Text;
+            Encoding.Default.GetString(Encoding.Default.GetBytes(type)); 
             string connectionString = "server=localhost;user = root;password=123456;Database=parkinglot;";
             MySqlConnection connection = new MySqlConnection(connectionString);
             connection.Open();
             MySqlCommand command = new MySqlCommand("insert into parkinglot.vehicleinfo(vehicle_id,vehicle_type,vehicle_place,vehicle_arrival)values('" + txtNum.Text + "','" + type + "','" + count+"','" + arrival + "')", connection);
             if (command.ExecuteNonQuery() > 0)
             {
-                MessageBox.Show("录入成功");
+               
                 DataRow dr = FrmMain.dt.NewRow();
                 dr["colnum"] = num;
                 dr["colarrival"] = arrival;
@@ -47,6 +47,9 @@ namespace parking_management_system
                 dr["coltype"] = type;
                 FrmMain.dt.Rows.Add(dr);
                 dgvInfo.DataSource = FrmMain.dt;
+                MessageBox.Show("车辆已停入！");
+                this.Close();
+                
             }
             else
             {
@@ -62,6 +65,18 @@ namespace parking_management_system
         {
             txtArrival.Text = Convert.ToString(arrival);
         }
+
+        private void btnExitInfo_Click(object sender, EventArgs e)
+        {
+            DialogResult tip = MessageBox.Show("确定取消添加车辆？", "提示",
+               MessageBoxButtons.OKCancel);
+            if (tip == DialogResult.OK)
+            {
+                this.Close();
+            }
+        }
+
+
 
 
     }

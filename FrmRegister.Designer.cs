@@ -113,7 +113,7 @@
             this.AcceptButton = this.btnregisterok;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(690, 303);
+            this.ClientSize = new System.Drawing.Size(642, 303);
             this.Controls.Add(this.txtresurepass);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.btncancel);

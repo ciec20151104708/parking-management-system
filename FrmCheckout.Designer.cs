@@ -90,6 +90,7 @@
             this.btnExitInfo.TabIndex = 20;
             this.btnExitInfo.Text = "取消";
             this.btnExitInfo.UseVisualStyleBackColor = true;
+            this.btnExitInfo.Click += new System.EventHandler(this.btnExitInfo_Click);
             // 
             // btncheckout
             // 

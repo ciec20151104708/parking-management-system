@@ -24,9 +24,7 @@ namespace parking_management_system
             DataColumn colcount = new DataColumn("colCount");
             DataColumn colnum = new DataColumn("colNum");
             DataColumn colarrival = new DataColumn("colArrival");
-            DataColumn coltype = new DataColumn("colType");
-
-            
+            DataColumn coltype = new DataColumn("colType");       
             dt.Columns.Add(colcount);
             dt.Columns.Add(colnum);
             dt.Columns.Add(colarrival);
@@ -50,7 +48,6 @@ namespace parking_management_system
             String type = null;
             String arrival = null;
             DateTime leave = DateTime.Now;
-            
             string connectionString = "server=localhost;user = root;password=123456;Database=parkinglot;";
             MySqlConnection connection = new MySqlConnection(connectionString);
             connection.Open();
@@ -69,7 +66,6 @@ namespace parking_management_system
             connection.Close();
             DateTime arrival_time = Convert.ToDateTime(arrival);
             TimeSpan getHours = leave.Subtract(arrival_time);
-
             double time = getHours.TotalHours;
             Math.Round(time,2);
             double money = time * 3;
@@ -78,8 +74,14 @@ namespace parking_management_system
             frmcheckout.Show();
         }
 
-
-
-
+        private void btnExitSystem_Click(object sender, EventArgs e)
+        {
+            DialogResult tip = MessageBox.Show("确定退出停车系统？", "提示",
+               MessageBoxButtons.OKCancel);
+            if (tip == DialogResult.OK)
+            {
+                this.Close();
+            }
+        }
     }
 }
