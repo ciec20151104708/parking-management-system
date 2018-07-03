@@ -10,5 +10,5 @@ D:\vs2010 project\parking management system\parking management system\obj\x86\De
 D:\vs2010 project\parking management system\parking management system\obj\x86\Debug\parking_management_system.FrmMain.resources
 D:\vs2010 project\parking management system\parking management system\obj\x86\Debug\parking_management_system.FrmRegister.resources
 D:\vs2010 project\parking management system\parking management system\obj\x86\Debug\parking_management_system.FrmInfo.resources
-D:\vs2010 project\parking management system\parking management system\obj\x86\Debug\parking_management_system.FrmRefreshCar.resources
 D:\vs2010 project\parking management system\parking management system\obj\x86\Debug\parking_management_system.FrmCheckout.resources
+D:\vs2010 project\parking management system\parking management system\obj\x86\Debug\parking_management_system.FrmCheckpwd.resources

@@ -14,11 +14,11 @@ namespace parking_management_system
     public partial class FrmMain : Form
     {
         public static DataTable dt = new DataTable();
-
         public FrmMain()
         {
             InitializeComponent();
         }
+
         public FrmMain(string username,string password)
         {
             DataColumn colcount = new DataColumn("colCount");
@@ -29,10 +29,9 @@ namespace parking_management_system
             dt.Columns.Add(colnum);
             dt.Columns.Add(colarrival);
             dt.Columns.Add(coltype);
-
             InitializeComponent();
-           // dgvInfo.colmn
             lbusername.Text = username;
+
         }
 
         private void btnAddCar_Click(object sender, EventArgs e)
@@ -47,13 +46,13 @@ namespace parking_management_system
             String count = null;
             String type = null;
             String arrival = null;
+            double money = 0;
             DateTime leave = DateTime.Now;
             string connectionString = "server=localhost;user = root;password=123456;Database=parkinglot;";
             MySqlConnection connection = new MySqlConnection(connectionString);
             connection.Open();
             MySqlCommand command = new MySqlCommand("select * from parkinglot.vehicleinfo", connection);
             MySqlDataReader reader = null;
-
             reader = command.ExecuteReader();
             while (reader.Read())
             {
@@ -66,14 +65,20 @@ namespace parking_management_system
             connection.Close();
             DateTime arrival_time = Convert.ToDateTime(arrival);
             TimeSpan getHours = leave.Subtract(arrival_time);
-            double time = getHours.TotalHours;
-            Math.Round(time,2);
-            double money = time * 3;
-            Math.Round(time,2);
+            double time = Convert.ToInt16(getHours.TotalHours);
+            if (type == "小型车辆")
+            {
+                money = time * 5;
+            }else if(type == "中型车辆")
+            {
+                money = time * 6;
+            } else if (type == "大型车辆")
+            {
+                money = time * 10;
+            }
             FrmCheckout frmcheckout = new FrmCheckout(dgvInfo,num,type,count,arrival,leave,time,money);
             frmcheckout.Show();
         }
-
         private void btnExitSystem_Click(object sender, EventArgs e)
         {
             DialogResult tip = MessageBox.Show("确定退出停车系统？", "提示",
@@ -82,6 +87,12 @@ namespace parking_management_system
             {
                 this.Close();
             }
+        }
+
+        private void btnalteruserpass_Click(object sender, EventArgs e)
+        {
+            FrmCheckpwd frmcheckpwd = new FrmCheckpwd();
+            frmcheckpwd.Show();
         }
     }
 }

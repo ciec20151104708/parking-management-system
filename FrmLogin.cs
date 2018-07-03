@@ -76,5 +76,10 @@ namespace parking_management_system
                 this.Close();
             }
         }
+
+        private void FrmLogin_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

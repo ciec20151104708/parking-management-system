@@ -60,6 +60,12 @@
     <Compile Include="FrmCheckout.Designer.cs">
       <DependentUpon>FrmCheckout.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmCheckpwd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCheckpwd.Designer.cs">
+      <DependentUpon>FrmCheckpwd.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmInfo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -78,12 +84,6 @@
     <Compile Include="FrmMain.Designer.cs">
       <DependentUpon>FrmMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmRefreshCar.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmRefreshCar.Designer.cs">
-      <DependentUpon>FrmRefreshCar.cs</DependentUpon>
-    </Compile>
     <Compile Include="FrmRegister.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -95,6 +95,9 @@
     <EmbeddedResource Include="FrmCheckout.resx">
       <DependentUpon>FrmCheckout.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmCheckpwd.resx">
+      <DependentUpon>FrmCheckpwd.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmInfo.resx">
       <DependentUpon>FrmInfo.cs</DependentUpon>
     </EmbeddedResource>
@@ -103,9 +106,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmMain.resx">
       <DependentUpon>FrmMain.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FrmRefreshCar.resx">
-      <DependentUpon>FrmRefreshCar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmRegister.resx">
       <DependentUpon>FrmRegister.cs</DependentUpon>

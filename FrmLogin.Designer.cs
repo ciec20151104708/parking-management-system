@@ -115,6 +115,7 @@
             this.Controls.Add(this.label1);
             this.Name = "FrmLogin";
             this.Text = "登陆窗口";
+            this.Load += new System.EventHandler(this.FrmLogin_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
