@@ -19,8 +19,7 @@ namespace parking_management_system
         public FrmLogin()
         {
             InitializeComponent();
-            txtusername.Text = "admin";
-            txtuserpass.Text = "123456";
+    
         }
 
         private void btnlogin_Click(object sender, EventArgs e)

@@ -13,6 +13,7 @@ namespace parking_management_system
 {
     public partial class FrmCheckpwd : Form
     {
+        
         public FrmCheckpwd()
         {
             InitializeComponent();
@@ -20,25 +21,29 @@ namespace parking_management_system
 
         private void btnchangepwd_Click(object sender, EventArgs e)
         {
+            String pwd = txtpwd.Text;
+            String user = txtuser.Text;
+            String surepwd = txtsurepwd.Text;
+            if (pwd == surepwd)
+            {
                 string connectionString = "server=localhost;user = root;password=123456;Database=parkinglot;";
                 MySqlConnection connection = new MySqlConnection(connectionString);
                 connection.Open();
-                if (txtpwd.Text == txtsurepwd.Text)
+                MySqlCommand command = new MySqlCommand("update parkinglot.userinfor set userpass = '" + pwd + "' where  username = '" + user + "'", connection);
+                if (command.ExecuteNonQuery() > 0)
                 {
-                   
-                    MySqlCommand command = new MySqlCommand("update parkinglot.userinfor set userpass = '" + txtpwd.Text + "'where  username = '" + txtuser + "' ", connection);
-                    if (command.ExecuteNonQuery() > 0)
-                    {
-                        MessageBox.Show("修改成功！");
-                    } 
+                    MessageBox.Show("修改成功！");
                 }
                 else
                 {
-                    MessageBox.Show("两次密码输入不同！请重新输入！");
+                    MessageBox.Show("修改失败");
                 }
-    
             }
-           
+            else
+            {
+                MessageBox.Show("两次密码不统一，请重新输入！");
+            }
+         }
         }
     }
 
