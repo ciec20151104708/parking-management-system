@@ -58,7 +58,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(84, 167);
+            this.label3.Location = new System.Drawing.Point(84, 172);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(37, 15);
             this.label3.TabIndex = 13;
@@ -134,63 +134,56 @@
             this.lbname.AutoSize = true;
             this.lbname.Location = new System.Drawing.Point(253, 30);
             this.lbname.Name = "lbname";
-            this.lbname.Size = new System.Drawing.Size(55, 15);
+            this.lbname.Size = new System.Drawing.Size(0, 15);
             this.lbname.TabIndex = 30;
-            this.lbname.Text = "label9";
             // 
             // lbtype
             // 
             this.lbtype.AutoSize = true;
             this.lbtype.Location = new System.Drawing.Point(253, 76);
             this.lbtype.Name = "lbtype";
-            this.lbtype.Size = new System.Drawing.Size(63, 15);
+            this.lbtype.Size = new System.Drawing.Size(0, 15);
             this.lbtype.TabIndex = 31;
-            this.lbtype.Text = "label10";
             // 
             // lbarrival
             // 
             this.lbarrival.AutoSize = true;
             this.lbarrival.Location = new System.Drawing.Point(253, 123);
             this.lbarrival.Name = "lbarrival";
-            this.lbarrival.Size = new System.Drawing.Size(63, 15);
+            this.lbarrival.Size = new System.Drawing.Size(0, 15);
             this.lbarrival.TabIndex = 32;
-            this.lbarrival.Text = "label11";
             // 
             // lbcount
             // 
             this.lbcount.AutoSize = true;
             this.lbcount.Location = new System.Drawing.Point(253, 166);
             this.lbcount.Name = "lbcount";
-            this.lbcount.Size = new System.Drawing.Size(63, 15);
+            this.lbcount.Size = new System.Drawing.Size(0, 15);
             this.lbcount.TabIndex = 33;
-            this.lbcount.Text = "label12";
             // 
             // lbleave
             // 
             this.lbleave.AutoSize = true;
             this.lbleave.Location = new System.Drawing.Point(253, 222);
             this.lbleave.Name = "lbleave";
-            this.lbleave.Size = new System.Drawing.Size(63, 15);
+            this.lbleave.Size = new System.Drawing.Size(0, 15);
             this.lbleave.TabIndex = 34;
-            this.lbleave.Text = "label12";
             // 
             // lbtime
             // 
             this.lbtime.AutoSize = true;
             this.lbtime.Location = new System.Drawing.Point(253, 263);
             this.lbtime.Name = "lbtime";
-            this.lbtime.Size = new System.Drawing.Size(63, 15);
+            this.lbtime.Size = new System.Drawing.Size(0, 15);
             this.lbtime.TabIndex = 35;
-            this.lbtime.Text = "label12";
             // 
             // lbmoney
             // 
             this.lbmoney.AutoSize = true;
             this.lbmoney.Location = new System.Drawing.Point(253, 310);
             this.lbmoney.Name = "lbmoney";
-            this.lbmoney.Size = new System.Drawing.Size(63, 15);
+            this.lbmoney.Size = new System.Drawing.Size(0, 15);
             this.lbmoney.TabIndex = 36;
-            this.lbmoney.Text = "label12";
             // 
             // FrmCheckout
             // 

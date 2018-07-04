@@ -94,5 +94,10 @@ namespace parking_management_system
             FrmCheckpwd frmcheckpwd = new FrmCheckpwd();
             frmcheckpwd.Show();
         }
+
+        private void FrmMain_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

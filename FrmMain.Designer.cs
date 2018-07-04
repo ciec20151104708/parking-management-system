@@ -91,6 +91,7 @@
             this.dgvInfo.Location = new System.Drawing.Point(6, 34);
             this.dgvInfo.Name = "dgvInfo";
             this.dgvInfo.RowTemplate.Height = 27;
+            this.dgvInfo.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvInfo.Size = new System.Drawing.Size(551, 305);
             this.dgvInfo.TabIndex = 0;
             // 
@@ -195,6 +196,7 @@
             this.Controls.Add(this.groupBox2);
             this.Name = "FrmMain";
             this.Text = "停车场管理系统";
+            this.Load += new System.EventHandler(this.FrmMain_Load);
             this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvInfo)).EndInit();
             this.ResumeLayout(false);
