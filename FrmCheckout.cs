@@ -43,7 +43,7 @@ namespace parking_management_system
             lbleave.Text = Convert.ToString(leave);        
             lbtime.Text = Convert.ToString(time);
             lbmoney.Text = Convert.ToString(money);
-            int index = dgvInfo.CurrentRow.Index;
+            int index = dgvInfo.SelectedRows[0].Index;
             String selectnum = dgvInfo.SelectedRows[index].Cells["colNum"].Value.ToString();
             string connectionString = "server=localhost;user = root;password=123456;Database=parkinglot;";
             MySqlConnection connection = new MySqlConnection(connectionString);

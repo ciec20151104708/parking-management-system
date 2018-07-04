@@ -24,26 +24,43 @@ namespace parking_management_system
             String pwd = txtpwd.Text;
             String user = txtuser.Text;
             String surepwd = txtsurepwd.Text;
-            if (pwd == surepwd)
+            if (user != "")
             {
-                string connectionString = "server=localhost;user = root;password=123456;Database=parkinglot;";
-                MySqlConnection connection = new MySqlConnection(connectionString);
-                connection.Open();
-                MySqlCommand command = new MySqlCommand("update parkinglot.userinfor set userpass = '" + pwd + "' where  username = '" + user + "'", connection);
-                if (command.ExecuteNonQuery() > 0)
+                if (pwd == surepwd)
                 {
-                    MessageBox.Show("修改成功！");
+                    string connectionString = "server=localhost;user = root;password=123456;Database=parkinglot;";
+                    MySqlConnection connection = new MySqlConnection(connectionString);
+                    connection.Open();
+                    MySqlCommand command = new MySqlCommand("update parkinglot.userinfor set userpass = '" + pwd + "' where  username = '" + user + "'", connection);
+                    if (command.ExecuteNonQuery() > 0)
+                    {
+                        MessageBox.Show("密码已修改成功！");
+                    }
+                    else
+                    {
+                        MessageBox.Show("修改失败");
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("修改失败");
+                    MessageBox.Show("两次密码不统一，请重新输入！");
                 }
             }
             else
             {
-                MessageBox.Show("两次密码不统一，请重新输入！");
+                MessageBox.Show("用户名不能为空！");
             }
          }
+
+        private void btnexit_Click(object sender, EventArgs e)
+        {
+            DialogResult tip = MessageBox.Show("确定取消修改密码？", "提示",
+              MessageBoxButtons.OKCancel);
+            if (tip == DialogResult.OK)
+            {
+                this.Close();
+            }
+        }
         }
     }
 

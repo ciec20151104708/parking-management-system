@@ -19,6 +19,7 @@ namespace parking_management_system
         public FrmLogin()
         {
             InitializeComponent();
+            this.skinEngine1.SkinFile = "MacOS.ssk";
     
         }
 
@@ -35,11 +36,13 @@ namespace parking_management_system
             MySqlDataReader reader1 = command1.ExecuteReader();
             MySqlDataReader reader2 = command2.ExecuteReader();   
            // reader1.Read();
-            if (reader1.HasRows)
+            if (txtusername.Text != "")
             {
-                connection_username.Close();
-                reader2.Read();
-                pwd = reader2["userpass"].ToString();
+                if (reader1.HasRows)
+                {
+                    connection_username.Close();
+                    reader2.Read();
+                    pwd = reader2["userpass"].ToString();
                     if (txtuserpass.Text == pwd)
                     {
                         user = txtusername.Text;
@@ -51,11 +54,16 @@ namespace parking_management_system
                     {
                         MessageBox.Show("密码输入错误，请重新输入！");
                     }
+                }
+                else
+                {
+                    MessageBox.Show("用户名不存在，请先注册");
+                }
             }
             else
             {
-                MessageBox.Show("用户名不存在，请先注册");
-            }  
+                MessageBox.Show("用户名不能为空！");
+            }
         }
 
         private void btnregister_Click(object sender, EventArgs e)

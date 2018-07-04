@@ -214,7 +214,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "FrmCheckout";
-            this.Text = "FrmCheckout";
+            this.Text = "停车结算";
             this.Load += new System.EventHandler(this.FrmCheckout_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

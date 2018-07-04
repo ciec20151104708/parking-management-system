@@ -83,6 +83,7 @@
             this.btnexit.TabIndex = 4;
             this.btnexit.Text = "取消";
             this.btnexit.UseVisualStyleBackColor = true;
+            this.btnexit.Click += new System.EventHandler(this.btnexit_Click);
             // 
             // txtuser
             // 
@@ -119,7 +120,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "FrmCheckpwd";
-            this.Text = "FrmCheckpwd";
+            this.Text = "修改密码";
             this.ResumeLayout(false);
             this.PerformLayout();
 

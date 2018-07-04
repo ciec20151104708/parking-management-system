@@ -132,6 +132,7 @@
             // 
             // comboBoxtype
             // 
+            this.comboBoxtype.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxtype.FormattingEnabled = true;
             this.comboBoxtype.Items.AddRange(new object[] {
             "小型车辆",
@@ -181,7 +182,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "FrmInfo";
-            this.Text = "FrmInfocs";
+            this.Text = "车辆添加菜单";
             this.ResumeLayout(false);
             this.PerformLayout();
 
