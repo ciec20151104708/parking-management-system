@@ -19,14 +19,14 @@ namespace parking_management_system
         public FrmLogin()
         {
             InitializeComponent();
-            this.skinEngine1.SkinFile = "MacOS.ssk";
+            this.skinEngine1.SkinFile = "MSN.ssk";
     
         }
 
         private void btnlogin_Click(object sender, EventArgs e)
         {
-          
-            string connectionString = "server=localhost;user = root;password=123456;Database=parkinglot;";
+
+            string connectionString = "server=localhost;user = root;password=123456;Database=parkinglot;Charset=utf8";
             MySqlConnection connection_username = new MySqlConnection(connectionString);
             MySqlConnection connection_userpass = new MySqlConnection(connectionString);
             connection_username.Open();
@@ -86,7 +86,7 @@ namespace parking_management_system
 
         private void FrmLogin_Load(object sender, EventArgs e)
         {
-
+            pictureBox.ImageLocation = "parkinglog.jpg";
         }
     }
 }

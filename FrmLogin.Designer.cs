@@ -36,12 +36,15 @@
             this.btnexit = new System.Windows.Forms.Button();
             this.btnregister = new System.Windows.Forms.Button();
             this.skinEngine1 = new Sunisoft.IrisSkin.SkinEngine();
+            this.label3 = new System.Windows.Forms.Label();
+            this.pictureBox = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(106, 64);
+            this.label1.Location = new System.Drawing.Point(426, 99);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(52, 15);
             this.label1.TabIndex = 0;
@@ -50,7 +53,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(106, 107);
+            this.label2.Location = new System.Drawing.Point(426, 193);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(37, 15);
             this.label2.TabIndex = 1;
@@ -58,14 +61,14 @@
             // 
             // txtusername
             // 
-            this.txtusername.Location = new System.Drawing.Point(201, 64);
+            this.txtusername.Location = new System.Drawing.Point(521, 99);
             this.txtusername.Name = "txtusername";
             this.txtusername.Size = new System.Drawing.Size(173, 25);
             this.txtusername.TabIndex = 2;
             // 
             // txtuserpass
             // 
-            this.txtuserpass.Location = new System.Drawing.Point(201, 97);
+            this.txtuserpass.Location = new System.Drawing.Point(521, 183);
             this.txtuserpass.Name = "txtuserpass";
             this.txtuserpass.PasswordChar = '*';
             this.txtuserpass.Size = new System.Drawing.Size(173, 25);
@@ -73,9 +76,9 @@
             // 
             // btnlogin
             // 
-            this.btnlogin.Location = new System.Drawing.Point(201, 184);
+            this.btnlogin.Location = new System.Drawing.Point(543, 256);
             this.btnlogin.Name = "btnlogin";
-            this.btnlogin.Size = new System.Drawing.Size(75, 23);
+            this.btnlogin.Size = new System.Drawing.Size(119, 23);
             this.btnlogin.TabIndex = 4;
             this.btnlogin.Text = "登录";
             this.btnlogin.UseVisualStyleBackColor = true;
@@ -83,9 +86,9 @@
             // 
             // btnexit
             // 
-            this.btnexit.Location = new System.Drawing.Point(323, 184);
+            this.btnexit.Location = new System.Drawing.Point(543, 389);
             this.btnexit.Name = "btnexit";
-            this.btnexit.Size = new System.Drawing.Size(75, 23);
+            this.btnexit.Size = new System.Drawing.Size(119, 23);
             this.btnexit.TabIndex = 5;
             this.btnexit.Text = "退出";
             this.btnexit.UseVisualStyleBackColor = true;
@@ -93,9 +96,9 @@
             // 
             // btnregister
             // 
-            this.btnregister.Location = new System.Drawing.Point(86, 184);
+            this.btnregister.Location = new System.Drawing.Point(543, 317);
             this.btnregister.Name = "btnregister";
-            this.btnregister.Size = new System.Drawing.Size(75, 23);
+            this.btnregister.Size = new System.Drawing.Size(119, 23);
             this.btnregister.TabIndex = 6;
             this.btnregister.Text = "注册账户";
             this.btnregister.UseVisualStyleBackColor = true;
@@ -110,12 +113,33 @@
             this.skinEngine1.SerialNumber = "";
             this.skinEngine1.SkinFile = null;
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("楷体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label3.Location = new System.Drawing.Point(56, 19);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(261, 20);
+            this.label3.TabIndex = 7;
+            this.label3.Text = "欢迎使用停车场管理系统！";
+            // 
+            // pictureBox
+            // 
+            this.pictureBox.Location = new System.Drawing.Point(27, 71);
+            this.pictureBox.Name = "pictureBox";
+            this.pictureBox.Size = new System.Drawing.Size(382, 398);
+            this.pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox.TabIndex = 8;
+            this.pictureBox.TabStop = false;
+            // 
             // FrmLogin
             // 
             this.AcceptButton = this.btnlogin;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(540, 253);
+            this.ClientSize = new System.Drawing.Size(732, 508);
+            this.Controls.Add(this.pictureBox);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.btnregister);
             this.Controls.Add(this.btnexit);
             this.Controls.Add(this.btnlogin);
@@ -126,6 +150,7 @@
             this.Name = "FrmLogin";
             this.Text = "登陆窗口";
             this.Load += new System.EventHandler(this.FrmLogin_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -141,6 +166,8 @@
         private System.Windows.Forms.Button btnexit;
         private System.Windows.Forms.Button btnregister;
         private Sunisoft.IrisSkin.SkinEngine skinEngine1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.PictureBox pictureBox;
     }
 }
 

@@ -42,6 +42,7 @@
             this.btnalteruserpass = new System.Windows.Forms.Button();
             this.btnExitSystem = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInfo)).BeginInit();
             this.SuspendLayout();
@@ -127,7 +128,7 @@
             // 
             this.lbusername.AutoSize = true;
             this.lbusername.Font = new System.Drawing.Font("宋体", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.lbusername.Location = new System.Drawing.Point(64, 27);
+            this.lbusername.Location = new System.Drawing.Point(132, 27);
             this.lbusername.Name = "lbusername";
             this.lbusername.Size = new System.Drawing.Size(0, 24);
             this.lbusername.TabIndex = 4;
@@ -135,7 +136,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(157, 35);
+            this.label5.Location = new System.Drawing.Point(225, 35);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(202, 15);
             this.label5.TabIndex = 5;
@@ -171,11 +172,21 @@
             this.label1.TabIndex = 8;
             this.label1.Text = "*本停车场共50个停车位，停车一小时内免费。超过一小时按照车辆类型收费。\r\n";
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(61, 37);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(37, 15);
+            this.label2.TabIndex = 9;
+            this.label2.Text = "您好";
+            // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(824, 513);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnExitSystem);
             this.Controls.Add(this.btnalteruserpass);
@@ -207,5 +218,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ColArrival;
         private System.Windows.Forms.DataGridViewTextBoxColumn Colplace;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
     }
 }

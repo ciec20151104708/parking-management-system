@@ -43,9 +43,10 @@ namespace parking_management_system
             lbleave.Text = Convert.ToString(leave);        
             lbtime.Text = Convert.ToString(time);
             lbmoney.Text = Convert.ToString(money);
+
             int index = dgvInfo.SelectedRows[0].Index;
             String selectnum = dgvInfo.SelectedRows[index].Cells["colNum"].Value.ToString();
-            string connectionString = "server=localhost;user = root;password=123456;Database=parkinglot;";
+            string connectionString = "server=localhost;user = root;password=123456;Database=parkinglot;Charset=utf8";
             MySqlConnection connection = new MySqlConnection(connectionString);
             connection.Open();
             MySqlCommand command = new MySqlCommand("update vehicleinfo set vehicle_leave = '" + leave + "',vehicle_time = '" + time + "',vehicle_money = '" + money + "' where  vehicle_id = '"+ selectnum + "' ", connection);
@@ -55,7 +56,9 @@ namespace parking_management_system
                 FrmMain.dt.Rows.RemoveAt(index);
                 dgvInfo.DataSource = FrmMain.dt;
             }
-        }
+
+    }
+
 
         private void btncheckout_Click(object sender, EventArgs e)
         {

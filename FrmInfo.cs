@@ -41,7 +41,7 @@ namespace parking_management_system
                     {
                          if(count!=""){
                                  Encoding.Default.GetString(Encoding.Default.GetBytes(type));
-                                 string connectionString = "server=localhost;user = root;password=123456;Database=parkinglot;";
+                                 string connectionString = "server=localhost;user = root;password=123456;Database=parkinglot;Charset=utf8";
                                  MySqlConnection connection = new MySqlConnection(connectionString);
                                  connection.Open();
                                  MySqlCommand command = new MySqlCommand("insert into parkinglot.vehicleinfo(vehicle_id,vehicle_type,vehicle_place,vehicle_arrival)values('" + txtNum.Text + "','" + type + "','" + count + "','" + arrival + "')", connection);

@@ -20,31 +20,45 @@ namespace parking_management_system
 
         private void btnregisterok_Click(object sender, EventArgs e)
         {
-
+            String registername = txtregistername.Text;
             FrmLogin frmlogin = new FrmLogin();
             string connectionString = "server=localhost;user = root;password=123456;Database=parkinglot;";
             MySqlConnection connection = new MySqlConnection(connectionString);
             connection.Open();
             MySqlCommand command = new MySqlCommand("insert into parkinglot.userinfor(username,userpass)values('"+ txtregistername.Text +"','"+ txtregisterpass.Text +"')",connection);
-            if (txtregistername.TextLength <= 0 || txtregisterpass.TextLength <= 0)
+            MySqlCommand command2 = new MySqlCommand("select count(*) from parkinglot.userinfor where username = '"+registername+"'", connection);
+            int count =Convert.ToInt16(command2.ExecuteScalar());
+            MessageBox.Show(count.ToString());
+            if (count > 0)
             {
-                MessageBox.Show("用户名或密码不能为空！");
+                MessageBox.Show("用户名已存在，请重新输入！");
+                txtregistername.Text = "";
+                txtregisterpass.Text = "";
+                txtresurepass.Text = "";
             }
             else
             {
-                if (txtresurepass.Text != txtregisterpass.Text)
+               
+                if (txtregistername.TextLength <= 0 || txtregisterpass.TextLength <= 0)
                 {
-                    MessageBox.Show("两次密码输入不同，请重新输入！");
+                    MessageBox.Show("用户名或密码不能为空！");
                 }
                 else
                 {
-                    if (command.ExecuteNonQuery() > 0)
+                    if (txtresurepass.Text != txtregisterpass.Text)
                     {
-                        MessageBox.Show("注册成功！");
-                        frmlogin.Show();
+                        MessageBox.Show("两次密码输入不同，请重新输入！");
+                    }
+                    else
+                    {
+                        if (command.ExecuteNonQuery() > 0)
+                        {
+                            MessageBox.Show("注册成功！");
+                            frmlogin.Show();
+                        }
                     }
                 }
-            }  
+            }
         }
         private void btncancel_Click(object sender, EventArgs e)
         {
@@ -55,6 +69,11 @@ namespace parking_management_system
             {
                 this.Close();
             }
+        }
+
+        private void FrmRegister_Load(object sender, EventArgs e)
+        {
+            pictureBox.ImageLocation = "parkinglog.jpg";
         }
     }
 }
