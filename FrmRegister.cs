@@ -38,7 +38,6 @@ namespace parking_management_system
             }
             else
             {
-               
                 if (txtregistername.TextLength <= 0 || txtregisterpass.TextLength <= 0)
                 {
                     MessageBox.Show("用户名或密码不能为空！");
@@ -62,7 +61,6 @@ namespace parking_management_system
         }
         private void btncancel_Click(object sender, EventArgs e)
         {
-           
             DialogResult tip = MessageBox.Show("确定取消注册？", "提示",
                 MessageBoxButtons.OKCancel);
             if(tip ==DialogResult.OK)
@@ -70,7 +68,6 @@ namespace parking_management_system
                 this.Close();
             }
         }
-
         private void FrmRegister_Load(object sender, EventArgs e)
         {
             pictureBox.ImageLocation = "parkinglog.jpg";
